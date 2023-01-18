@@ -35,7 +35,13 @@ module.exports = function (app) {
         returnUnit
       );
 
-      result = { initNum, initUnit, returnUnit, returnNum, string };
+      result = {
+        initNum: parseFloat(initNum),
+        initUnit,
+        returnNum: parseFloat(returnNum),
+        returnUnit,
+        string,
+      };
     }
 
     res.send(result);

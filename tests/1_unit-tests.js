@@ -37,7 +37,7 @@ suite("Unit Tests", function () {
     });
 
     test("input l", function () {
-      assert.equal("l", convertHandler.getUnit("100.50l"));
+      assert.equal("L", convertHandler.getUnit("100.50l"));
     });
 
     test("input km", function () {
@@ -70,8 +70,8 @@ suite("Unit Tests", function () {
       assert.equal("lbs", convertHandler.getReturnUnit("kg"));
     });
 
-    test("l", function () {
-      assert.equal("gal", convertHandler.getReturnUnit("l"));
+    test("L", function () {
+      assert.equal("gal", convertHandler.getReturnUnit("L"));
     });
 
     test("km", function () {
@@ -83,7 +83,7 @@ suite("Unit Tests", function () {
     });
 
     test("gal", function () {
-      assert.equal("l", convertHandler.getReturnUnit("gal"));
+      assert.equal("L", convertHandler.getReturnUnit("gal"));
     });
 
     test("lbs", function () {
@@ -96,8 +96,8 @@ suite("Unit Tests", function () {
       assert.equal("kilograms", convertHandler.spellOutUnit("kg"));
     });
 
-    test("l", function () {
-      assert.equal("liters", convertHandler.spellOutUnit("l"));
+    test("L", function () {
+      assert.equal("liters", convertHandler.spellOutUnit("L"));
     });
 
     test("km", function () {
@@ -125,10 +125,10 @@ suite("Unit Tests", function () {
       );
     });
 
-    test("l", function () {
+    test("L", function () {
       assert.equal(
         "100 liters converts to 10 gallons",
-        convertHandler.getString(100, "l", 10, "gal")
+        convertHandler.getString(100, "L", 10, "gal")
       );
     });
   });
@@ -138,8 +138,8 @@ suite("Unit Tests", function () {
       assert.equal(378.541, convertHandler.convert(100, "gal"));
     });
 
-    test("l to gal", function () {
-      assert.equal(26.41722, convertHandler.convert(100, "l"));
+    test("L to gal", function () {
+      assert.equal(26.41722, convertHandler.convert(100, "L"));
     });
 
     test("mi to km", function () {

@@ -23,7 +23,7 @@ function ConvertHandler() {
       if (validUnits.find((v) => v == unit)) result = unit;
     }
 
-    return result;
+    return result === "l" ? "L" : result;
   };
 
   this.getReturnUnit = function (initUnit) {
@@ -32,10 +32,10 @@ function ConvertHandler() {
         return "mi";
       case "mi":
         return "km";
-      case "l":
+      case "L":
         return "gal";
       case "gal":
-        return "l";
+        return "L";
       case "lbs":
         return "kg";
       case "kg":
@@ -49,7 +49,7 @@ function ConvertHandler() {
         return "kilometers";
       case "mi":
         return "miles";
-      case "l":
+      case "L":
         return "liters";
       case "gal":
         return "gallons";
@@ -76,7 +76,7 @@ function ConvertHandler() {
       case "mi":
         result = initNum * miToKm;
         break;
-      case "l":
+      case "L":
         result = initNum / galToL;
         break;
       case "gal":
